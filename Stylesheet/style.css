@@ -4,9 +4,6 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-
-
-
 #grid {
     width:670px;
     padding: 40px;
@@ -533,6 +530,3 @@ img.icon:hover {
         border: 2px solid black;
     }
 }
-
-
-
