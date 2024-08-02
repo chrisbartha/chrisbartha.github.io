@@ -1,0 +1,36 @@
+/* Code editor visual styling */
+.code-editor {
+    z-index: -1;
+    user-select: none; /* Prevents text selection */
+    position: absolute; /* Fix position to the left side of the viewport */
+    top: 7.5px;
+    left: 13px;
+    height: 200vh; /* Full height of the viewport */
+    width: 100%; /* Width for line numbers */
+    border-right: 1px solid #333;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0)); /* Add fading mask */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0)); /* For Safari */
+}
+
+.line {
+    user-select: none; /* Prevents text selection */
+    display: flex;
+    align-items: center;
+    height: 30px; /* Line height */
+    transition: color 0.3s;
+}
+
+.line-number {
+    width: 100%;
+    text-align: left;
+    padding-right: 10px;
+    color: #55535B; /* Lighter color for line numbers */
+    font-size: 1.0em;
+    font-family: 'Roboto Mono';
+    user-select: none; /* Prevents text selection */
+}
+
+.highlight {
+    color: #8E8E92; /* Slightly lighter color when highlighted */
+}

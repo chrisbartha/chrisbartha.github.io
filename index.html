@@ -1,74 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <title>Chris Bartha Computer Science</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Christopher Bartha's resumé and showcase site">
-    <meta name="keywords" content="christopher bartha computerscience" />
-    <meta name="author" content="Christopher Bartha" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
-    <link href="Stylesheet/style.css" rel="stylesheet">
-    <link href="project/sudoku.html" rel="next">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Rokkitt|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <script src="js/page_script.js"></script>
-    <script src="js/sudoku_script.js"></script>
+<html lang=""en" dir=""ltr">
+    <head>
+        <title>
+            Christopher Bartha
+        </title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Christopher Bartha's resumé and showcase site">
+        <meta name="keywords" content="christopher bartha computerscience" />
+        <meta name="author" content="Christopher Bartha" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+        <link rel="stylesheet" href="Stylesheet/style.css" >
+        <link rel="stylesheet" href="Stylesheet/numbers.css">
+        <link rel="stylesheet" href="Stylesheet/cursor.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Rokkitt|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" type="text/css">
+    </head>
 
-</head>
-<body>
+    <body>
 
+        <header>
+            <h1>Christopher Bartha<span class="cursor">|</span></h1>
+            <p id="introduction">Hi! I'm Chris, a software engineer from California.</p>
+            <p id="about">I am currently exploring opportunities where I can leverage my skills in machine learning and software development.</p>
+        </header>
 
-<div id="page-wrapper">
-    <!-- Header -->
-    <div id="header">
-        <div class="inner name"><a class="author_name" onclick="topFunction()">Christopher Bartha</a></div>
-    </div>
-    <p id="icon">
-        <a onclick="topFunction()">
-            <img class="icon" src="img/portrait.jpg" alt="Christopher Bartha Computer Science Resumé">
-        </a>
-    </p>
+        <section class="content-section">
+            <div class="content-item experience">
+                <h2>Experience</h2>
+                <div class="entry">
+                    <p class="entry-topic">2024</p>
+                    <p>B.S. Computer Science</p>
+                    <p>Sonoma State University</p>
+                </div>
+                <div class="entry">
+                    <p class="entry-topic">2023 - 2024</p>
+                    <p>Libutti Realty Advisors</p>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="entry">
+                    <p class="entry-topic">2021 - 2022</p>
+                    <p>MentorAmp</p>
+                    <p>Software Engineer + Web Design</p>
+                </div>
+                <div class="entry">
+                    <p class="entry-topic">2001 - present</p>
+                    <p>Life</p>
+                </div>
+            </div>
 
-</div>
+            <!-- Experience + Skills Section -->
+            <div class="content-item skills">
+                <h2>Skills</h2>
+                <div class="entry">
+                    <p class="entry-topic">Front-end</p>
+                    <p style="color: #61DAFB;">React</p>
+                </div>
+                <div class="entry">
+                    <p class="entry-topic">Back-end</p>
+                    <p style="color: #00599C;">C++</p>
+                    <p style="color: #A8B9CC;">C</p>
+                    <p style="color: #3776AB;">Python</p>
+                    <p style="color: #276DC3;">R</p>
+                    <p style="color: #4479A1;">MySQL</p>
+                </div>
+                <div class="entry">
+                    <p class="entry-topic">Machine Learning + Data Science</p>
+                    <p style="color: #FF6F00;">TensorFlow</p>
+                    <p style="color: #F7931E;">Scikit-learn</p>
+                    <p style="color: #EE4C2C;">PyTorch</p>
+                </div>
+            </div>
+        </section>
 
-<!-- About Me -->
-<div id="about"><div class="inner">
-    <p>I am an aspiring Software Developer</p><br/><br/><br/>
-    <!-- Console -->
-    <div id="code">
-        <div id="console">
-            &gt; Chris.major<br/>
-            <span class="answer">&nbsp;&nbsp;=&gt; "Computer Science"<br/><br/></span>
-            &gt; Chris.coding.languages<br/>
-            <span class="answer">   &nbsp;&nbsp;=&gt; My Coding Languages<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(strong-suit)<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(limited knowledge)<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(surface-level knowledge)<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JavaScript&nbsp;&nbsp;(surface-level knowledge)<br/>
-							<br/></span>
-            <span class="answer">   &nbsp;&nbsp;=&gt; Future Languages<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Python<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Node.js<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scala<br/>
-							<br/></span>
-            &gt; Chris.education<br/>
-            <span class="answer">&nbsp;&nbsp;=&gt; "California State University, Sonoma"<br/><br/></span>
-            &gt; Chris.projects<br/>
-            <span class="answer answer_pointer">&nbsp;&nbsp;=&gt; ["<a target="_self" onclick="redirect_html()">Sudoku Solver</a>",
-								 "<a target="_blank">Blank</a>",
-								 "<a target="_blank">Blank</a>"]<br/><br/></span>
-            &gt; Chris.email<br/>
-            <span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="mailto:dev@chrisbartha.com">dev@chrisbartha.com</a>"<br/><br/></span>
-            <span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="mailto:chrisbartha@yahoo.com">chrisbartha@yahoo.com</a>"<br/><br/></span>
+        <!-- About Section -->
+        <section class="about-section">
+            <p id="introduction">About</p>
+            <p id="about-paragraph">
+                I believe my key strength lies in my willingness to quickly adapt to both new or unfamiliar technology. 
+            </p>
+            <p id="about-paragraph">
+                Through my academic and practical experiences, I’ve developed a solid foundation in various programming languages and tools. 
+                I continuously build upon this knowledge by seeking out new challenges and collaborating with individuals who are passionate about creating impactful solutions.
+            </p>
+            <p id="about-paragraph">
+                Inspired by the vibrant tech community and industry leaders who push the boundaries of innovation, I am eager to contribute my skills to dynamic teams. 
+                Whether working remotely or locally, I aim to collaborate on cutting-edge projects and further develop my expertise in AI and software engineering.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <p id="introduction">Contact</p>
+            <p id="about-paragraph">
+                Feel free to email me at <a style="color: #0073b1;" href="mailto:dev@chrisbartha.com">dev@chrisbartha.com</a> or look me up on 
+                <a href="https://www.linkedin.com/in/christopherbartha" target="_blank" rel="noopener noreferrer" style="color: #0073b1;">LinkedIn</a>.
+            </p>
+        </section>
+
+        <div id="code-editor" class="code-editor">
+            <!-- Numbered lines will be generated here -->
         </div>
-    </div>
 
-    <br/>
-</div>
-</div>
-
-</body>
-
+        <div class="spacer"></div>
+        
+        <script src="/js/script.js"></script>
+    </body>
 </html>
