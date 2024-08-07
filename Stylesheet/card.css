@@ -46,7 +46,7 @@
     max-width: calc(30% - 20px);
     border-radius: 8px;
     background-color: rgba(200, 200, 200, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.01); 
+    border: 1px solid rgba(255, 255, 255, 0.03); 
     text-decoration: none; /* Removes underline from link */
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@
 }
 
 .container p {
-  color: lightslategray; /* White color for years */
+  color: lightgray; /* White color for years */
 }
 
 #portfolio-heading {
