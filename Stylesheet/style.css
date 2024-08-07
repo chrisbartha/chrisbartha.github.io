@@ -2,14 +2,14 @@ html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    height: 2000px;
+    height: auto;
 }
 
 body {
     background-color: #1C1C26;
     /*background-color: #0E0F17;*/
-    margin: auto;
-    margin-top: 70px;
+    margin: 70px auto;
+
     color: white;
     font-family: 'Roboto Mono', monospace;
     width: 950px;
@@ -60,6 +60,7 @@ img {
     margin-top: 60px;
     margin-bottom: 175px;
     height: 350px; /* Set height to fill the viewport */
+    
 }
 
 .content-item {
@@ -90,9 +91,9 @@ img {
 .entry p {
     font-weight: 300;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     text-align: left;
-    color: rgb(200, 200, 200); /* White color for years */
+    color: rgb(200, 200, 200); /* White color */
 }
 
 .about-section #about-introduction {

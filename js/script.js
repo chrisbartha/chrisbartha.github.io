@@ -60,4 +60,4 @@ function highlightLineNumber(event) {
 document.addEventListener('mousemove', highlightLineNumber);
 
 // Generate enough lines to fill the viewport height
-generateNumberedLines('code-editor', 90);
+generateNumberedLines('code-editor', 120);
