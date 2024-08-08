@@ -23,14 +23,14 @@
     <body>
 
         <header>
-            <h1>Christopher Bartha<span class="cursor">|</span></h1>
-            <p id="introduction">Hi! I'm Chris, a software engineer from California.</p>
+            <h1 id="name-cursor">Christopher Bartha</h1>
+            <p class="section__header">Hi! I’m Christopher, a software engineer from California.</p>
             <p id="about">I am currently exploring opportunities where I can leverage my skills in machine learning and software development.</p>
         </header>
 
         <!-- Experience Section -->
         <section class="content-section">
-            <div class="content-item experience">
+            <div class="content-item">
                 <h2>Experience</h2>
                 <div class="entry">
                     <p class="entry-topic">2024</p>
@@ -54,7 +54,7 @@
             </div>
 
             <!-- Skills Section -->
-            <div class="content-item skills">
+            <div class="content-item">
                 <h2>Skills</h2>
                 <div class="entry">
                     <p class="entry-topic">Front-end</p>
@@ -78,17 +78,17 @@
         </section>
 
         <!-- Project Portolio -->
-        <section class="card-container">
-            <p id="portfolio-heading">Portfolio</p>
-
-            <a href="https://github.com/chrisbartha/ABGQI-CNN" target="_blank" class="card">
+        <section id="card-container">
+            <p class="portfolio__header">Portfolio</p>
+            
+            <a class="card" href="https://github.com/chrisbartha/ABGQI-CNN" target="_blank">
                 <div class="container">
                     <h1>ABGQI-CNN Acoustic Classifier</h1> 
                     <p>A CNN tool for soundscape classification and ecological analysis.</p> 
                 </div>
             </a>
             
-            <a href="https://github.com/chrisbartha/San-Diego-Airbnb-EDA" target="_blank" class="card">
+            <a class="card" href="https://github.com/chrisbartha/San-Diego-Airbnb-EDA" target="_blank">
                 <div class="container">
                     <h1>San Diego Airbnb Analysis</h1> 
                     <p>Exploratory data analysis and machine learning insights from San Diego Airbnb listings.</p> 
@@ -97,24 +97,25 @@
         </section>
 
         <!-- About Section -->
-        <section class="about-section">
-            <p id="introduction">About</p>
-            <p id="about-paragraph">
+        <section class="section about-section">
+            <p class="section__header">About</p>
+            <p class="section-paragraph">
                 I believe my key strength lies in my willingness to quickly adapt to both new and unfamiliar technology. 
             </p>
-            <p id="about-paragraph">
+            <p class="section-paragraph">
                 Through my academic and practical experiences, I've developed a solid foundation in various programming languages and tools. 
                 I continuously build upon this knowledge by seeking out new challenges and collaborating with individuals who are passionate about creating impactful solutions.
             </p>
-            <p id="about-paragraph">
+            <p class="section-paragraph">
                 Inspired by the vibrant tech community and industry leaders who push the boundaries of innovation, I am eager to contribute my skills to dynamic teams. 
                 Whether working remotely or locally, I aim to collaborate on cutting-edge projects and further develop my expertise in AI and software engineering.
             </p>
         </section>
 
-        <section class="about-section">
-            <p id="introduction">Contact</p>
-            <p id="about-paragraph">
+        <!-- Contact Section -->
+        <section class="section contact-section">
+            <p class="section__header">Contact</p>
+            <p class="section-paragraph">
                 Feel free to email me at <a style="color: #0073b1;" href="mailto:dev@chrisbartha.com">dev@chrisbartha.com</a> or look me up on 
                 <a href="https://www.linkedin.com/in/christopherbartha" target="_blank" rel="noopener noreferrer" style="color: #0073b1;">LinkedIn</a>.
             </p>
