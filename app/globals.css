@@ -21,9 +21,15 @@
   --text-tertiary: #666666;
   --text-accent: #ffffff;
 
+  /*
   --accent-primary: #0070f3;
+  */
+  --accent-primary: #95989a;
   --accent-secondary: #7928ca;
+  /*
   --accent-gradient: linear-gradient(135deg, #0070f3 0%, #7928ca 100%);
+  */
+  --accent-gradient: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   --accent-glow: rgba(0, 112, 243, 0.15);
 
   --success: #50e3c2;
@@ -240,7 +246,7 @@ ul {
 }
 
 .nav-cta:hover {
-  background: var(--text-secondary) !important;
+  background: #e5e5e5 !important;
   color: var(--bg-primary) !important;
 }
 
@@ -430,7 +436,7 @@ ul {
 }
 
 .btn-primary:hover {
-  background: var(--text-secondary);
+  background: #e5e5e5;
   transform: translateY(-1px);
 }
 
@@ -999,8 +1005,8 @@ ul {
 }
 
 .contact-link.primary:hover {
-  background: var(--text-secondary);
-  border-color: var(--text-secondary);
+  background: #e5e5e5;
+  border-color: #e5e5e5;
 }
 
 .contact-link svg {
@@ -1196,4 +1202,22 @@ ul {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ============================================
+   Enhanced Button Transitions
+   ============================================ */
+
+.btn,
+.nav-cta {
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Active nav link indicator */
+.nav-links a.active {
+  color: var(--text-accent);
+}
+
+.nav-links a.active::after {
+  width: 100%;
 }
