@@ -55,7 +55,7 @@ export default function Home() {
             </p>
             <div className="hero-cta">
               <a href="#contact" className="btn btn-primary">
-                Get in touch
+                Connect
               </a>
               <a href="#projects" className="btn btn-secondary">
                 View work
@@ -72,7 +72,7 @@ export default function Home() {
               </div>
               <div className="stat">
                 <span className="stat-number">CS</span>
-                <span className="stat-label">Degree @ SSU</span>
+                <span className="stat-label">B.S. at SSU</span>
               </div>
             </div>
           </div>

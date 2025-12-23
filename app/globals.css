@@ -1091,8 +1091,13 @@ ul {
     min-height: auto;
   }
 
+  .hero-visual {
+    display: none;
+  }
+
   .hero-title {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    font-size: 15vw;
+    line-height: 0.95;
   }
 
   .hero-stats {
@@ -1149,6 +1154,17 @@ ul {
 
   .btn {
     width: 100%;
+  }
+
+  .btn-primary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-secondary);
+  }
+
+  .btn-primary:hover {
+    background: var(--bg-hover);
+    border-color: var(--border-accent);
   }
 }
 
