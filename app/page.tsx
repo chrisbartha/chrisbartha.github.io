@@ -118,9 +118,9 @@ export default function Home() {
                   {"\n"}
                   {"  "}],{"\n"}
                   {"  "}
-                  <span className="property">passion</span>:{" "}
+                  <span className="property">currently</span>:{" "}
                   <span className="string">
-                    &quot;Building great products&quot;
+                    &quot;Studying ML&quot;
                   </span>
                   {"\n"}
                   {"}"};
@@ -396,19 +396,19 @@ export default function Home() {
               <h3 className="skill-category-title">Languages</h3>
               <div className="skill-items">
                 <div className="skill-item">
+                  <span className="skill-name">Next.js</span>
+                </div>
+                <div className="skill-item">
+                  <span className="skill-name">Node.js</span>
+                </div>
+                <div className="skill-item">
                   <span className="skill-name">Python</span>
                 </div>
                 <div className="skill-item">
-                  <span className="skill-name">JavaScript</span>
-                </div>
-                <div className="skill-item">
-                  <span className="skill-name">TypeScript</span>
-                </div>
-                <div className="skill-item">
-                  <span className="skill-name">SQL</span>
-                </div>
-                <div className="skill-item">
                   <span className="skill-name">C++</span>
+                </div>
+                <div className="skill-item">
+                  <span className="skill-name">Docker</span>
                 </div>
               </div>
             </div>
