@@ -235,7 +235,7 @@ export default function ClientScripts() {
 
     // Console easter egg
     console.log(
-      "%c👋 Hey there, curious developer!",
+      "%cHey you!",
       "font-size: 20px; font-weight: bold;"
     );
     console.log(

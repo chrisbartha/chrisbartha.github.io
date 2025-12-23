@@ -18,6 +18,7 @@ export default function NotFound() {
     >
       <h1 style={{ fontSize: "4rem", fontWeight: 700, margin: 0 }}>404</h1>
       <p style={{ color: "#a1a1a1", margin: 0 }}>Page not found</p>
+      <p style={{ color: "#a1a1a1", margin: 0 }}>Why are you looking here? No secrets...</p>
       <Link
         href="/"
         style={{

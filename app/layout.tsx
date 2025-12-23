@@ -8,12 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Christopher Bartha | Full-Stack Engineer",
+  title: "Christopher Bartha",
   description:
     "Full-Stack Engineer specializing in React, Next.js, and Python. Building scalable web applications with modern technologies.",
-  icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>",
-  },
 };
 
 export default function RootLayout({
