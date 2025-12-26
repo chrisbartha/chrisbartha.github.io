@@ -79,6 +79,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
+  background: transparent;
 }
 
 body {
@@ -86,10 +87,26 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--bg-primary);
+  background-color: #000; /* fallback color during Vanta load */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* Vanta background layer */
+.vanta-background {
+  position: fixed;
+  inset: 0;
+  background: #000; /* prevents white flash before Vanta paints */
+  z-index: -2;
+}
+
+/* Page content wrapper creates stacking context above Vanta */
+.page-shell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  z-index: 1;
 }
 
 /* Noise texture overlay */
@@ -486,8 +503,8 @@ ul {
 .code-window {
   width: 100%;
   max-width: 480px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
+  background: rgba(17, 17, 17, 0.7);
+  border: 1px solid rgba(68, 68, 68, 0.6);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -498,8 +515,8 @@ ul {
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-lg);
-  background: var(--bg-tertiary);
-  border-bottom: 1px solid var(--border-primary);
+  background: rgba(26, 26, 26, 0.7);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.6);
 }
 
 .window-dots {

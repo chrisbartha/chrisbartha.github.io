@@ -1,12 +1,15 @@
 import ClientScripts from "./ClientScripts";
+import VantaBackground from "./components/VantaBackground";
 
 export default function Home() {
   return (
     <>
-      <div className="noise"></div>
-      <div className="gradient-blur"></div>
+      <VantaBackground />
+      <div className="page-shell">
+        <div className="noise"></div>
+        <div className="gradient-blur"></div>
 
-      <nav className="navbar">
+        <nav className="navbar">
         <div className="nav-container">
           <a href="#" className="logo">
             <span className="logo-text">CB</span>
@@ -573,7 +576,8 @@ export default function Home() {
             San Francisco Bay Area
           </p>
         </div>
-      </footer>
+        </footer>
+      </div>
 
       <ClientScripts />
     </>
