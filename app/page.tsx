@@ -42,10 +42,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className="hero" id="about">
           <div className="hero-content">
-            <div className="hero-badge">
-              <span className="status-dot"></span>
-              Available for opportunities
-            </div>
             <h1 className="hero-title">
               <span className="title-line">Christopher</span>
               <span className="title-line">Bartha</span>
@@ -148,7 +144,6 @@ export default function Home() {
               <div className="experience-header">
                 <div className="company-info">
                   <h3 className="company-name">Flow AI</h3>
-                  <span className="company-tag">Startup</span>
                 </div>
                 <span className="experience-date">Oct 2024 — Nov 2025</span>
               </div>
