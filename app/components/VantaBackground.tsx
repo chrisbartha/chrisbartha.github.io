@@ -35,10 +35,11 @@ export default function VantaBackground() {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0x20202,
-        waveHeight: 14.5,
+        color: 66825,
+        shininess: 35,
+        waveHeight: 15,
         waveSpeed: 0.3,
-        zoom: 0.65,
+        zoom: 0.75,
       });
     };
 
@@ -54,4 +55,3 @@ export default function VantaBackground() {
 
   return <div ref={vantaRef} className="vanta-background" />;
 }
-
