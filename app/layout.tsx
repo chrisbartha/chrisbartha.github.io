@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -32,8 +33,18 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.variable}>{children}</body>
+      <body className={inter.variable}>
+        {/* Load exact versions requested (three r134 + vanta 0.5.24) */}
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"
+          strategy="beforeInteractive"
+        />
+        {children}
+      </body>
     </html>
   );
 }
-
