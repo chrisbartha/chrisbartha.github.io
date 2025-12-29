@@ -22,9 +22,8 @@ export default function VantaBackground() {
     if (vantaEffectRef.current) return;
     if (!vantaRef.current) return;
 
-    // Scripts are loaded globally via next/script in layout.tsx
     const init = () => {
-      if (!window.VANTA?.WAVES || !vantaRef.current) return;
+      if (!window.VANTA?.WAVES || !vantaRef.current) return false;
 
       vantaEffectRef.current = window.VANTA.WAVES({
         el: vantaRef.current,
@@ -41,13 +40,18 @@ export default function VantaBackground() {
         waveSpeed: 0.3,
         zoom: 0.75,
       });
+      return true;
     };
 
-    // small delay to ensure scripts are ready
-    const timer = setTimeout(init, 50);
+    // Try immediately, then poll until scripts are ready
+    if (!init()) {
+      const interval = setInterval(() => {
+        if (init()) clearInterval(interval);
+      }, 50);
+      return () => clearInterval(interval);
+    }
 
     return () => {
-      clearTimeout(timer);
       vantaEffectRef.current?.destroy();
       vantaEffectRef.current = null;
     };
