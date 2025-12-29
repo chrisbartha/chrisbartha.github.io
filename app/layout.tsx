@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
+import JsonLd from "./components/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,7 +13,34 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Christopher Bartha",
   description:
-    "Full-Stack Engineer specializing in React, Next.js, and Python. Building scalable web applications with modern technologies.",
+    "Full-Stack Software Engineer focused on backend systems, data pipelines, and applied machine learning. Building scalable, production-grade software.",
+  keywords: [
+    "Christopher Bartha",
+    "Software Engineer",
+    "Backend Engineer",
+    "Full-Stack Engineer",
+    "Machine Learning",
+    "Data Engineering",
+    "Distributed Systems",
+    "Python",
+    "PostgreSQL",
+    "Next.js",
+  ],
+  authors: [{ name: "Christopher Bartha" }],
+  openGraph: {
+    title: "Christopher Bartha | Software Engineer",
+    description:
+      "Full-Stack Software Engineer focused on backend systems, data pipelines, and applied machine learning.",
+    url: "https://chrisbartha.com",
+    siteName: "Christopher Bartha",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  metadataBase: new URL("https://chrisbartha.com"),
 };
 
 export default function RootLayout({
@@ -43,6 +72,7 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"
           strategy="beforeInteractive"
         />
+        <JsonLd />
         {children}
       </body>
     </html>
