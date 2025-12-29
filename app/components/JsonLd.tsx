@@ -11,6 +11,7 @@ export default function JsonLd() {
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Christopher Bartha",
+          alternateName: "Chris Bartha",
           url: "https://chrisbartha.com",
           jobTitle: "Software Engineer",
           description:
@@ -25,7 +26,7 @@ export default function JsonLd() {
           ],
           sameAs: [
             "https://www.linkedin.com/in/chrisbartha",
-            "https://github.com/<your-github>",
+            "https://github.com/chrisbartha",
           ],
         }),
       }}

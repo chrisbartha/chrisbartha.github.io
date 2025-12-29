@@ -16,12 +16,16 @@ export const metadata: Metadata = {
     "Full-Stack Software Engineer focused on backend systems, data pipelines, and applied machine learning. Building scalable, production-grade software.",
   keywords: [
     "Christopher Bartha",
+    "Chris Bartha",
+    "Machine Learning",
     "Software Engineer",
     "Backend Engineer",
     "Full-Stack Engineer",
     "Machine Learning",
     "Data Engineering",
     "Distributed Systems",
+    "APIs",
+    "Cloud Infrastructure",
     "Python",
     "PostgreSQL",
     "Next.js",
@@ -35,6 +39,12 @@ export const metadata: Metadata = {
     siteName: "Christopher Bartha",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Christopher Bartha",
+    description:
+      "Full-Stack Software Engineer focused on backend systems, data pipelines, and applied machine learning.",
   },
   robots: {
     index: true,
