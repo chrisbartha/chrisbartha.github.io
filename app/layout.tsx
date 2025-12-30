@@ -63,11 +63,11 @@ export default function RootLayout({
       <body className={inter.variable}>
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <Script
           src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <JsonLd />
         {children}

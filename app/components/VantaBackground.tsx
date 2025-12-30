@@ -23,7 +23,7 @@ export default function VantaBackground() {
     if (!vantaRef.current) return;
 
     const init = () => {
-      if (!window.VANTA?.WAVES || !vantaRef.current) return false;
+      if (!window.VANTA?.WAVES || !vantaRef.current) return;
 
       vantaEffectRef.current = window.VANTA.WAVES({
         el: vantaRef.current,
@@ -40,18 +40,13 @@ export default function VantaBackground() {
         waveSpeed: 0.3,
         zoom: 0.75,
       });
-      return true;
     };
 
-    // Try immediately, then poll until scripts are ready
-    if (!init()) {
-      const interval = setInterval(() => {
-        if (init()) clearInterval(interval);
-      }, 50);
-      return () => clearInterval(interval);
-    }
+    // small delay to ensure scripts are ready
+    const timer = setTimeout(init, 50);
 
     return () => {
+      clearTimeout(timer);
       vantaEffectRef.current?.destroy();
       vantaEffectRef.current = null;
     };
