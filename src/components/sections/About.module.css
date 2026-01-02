@@ -1,0 +1,30 @@
+.about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #d1d5db;
+  line-height: 1.8;
+  max-width: 1080px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .description {
+    font-size: 0.9375rem;
+  }
+}
