@@ -42,7 +42,6 @@ export default function VantaBackground() {
       });
     };
 
-    // small delay to ensure scripts are ready
     const timer = setTimeout(init, 50);
 
     return () => {

@@ -1,5 +1,4 @@
 :root {
-  /* Colors */
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
   --bg-tertiary: #111111;
@@ -17,19 +16,16 @@
 
   --accent-primary: #95989a;
   --accent-secondary: #7928ca;
-
   --accent-gradient: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   --accent-glow: rgba(0, 112, 243, 0.15);
 
   --success: #50e3c2;
   --warning: #f5a623;
 
-  /* Typography fallbacks (next/font variables override in body) */
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Consolas", monospace;
 
-  /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -39,11 +35,9 @@
   --space-3xl: 4rem;
   --space-4xl: 6rem;
 
-  /* Layout */
   --max-width: 1440px;
   --nav-height: 64px;
 
-  /* Effects */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
@@ -56,7 +50,6 @@
   --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -67,35 +60,30 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
   background: transparent;
 }
 
 body {
-  /* Override font-sans now that next/font has injected --font-inter */
   --font-sans:
     var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
-
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: #000; /* fallback color during Vanta load */
+  background-color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* Vanta background layer */
 .vanta-background {
   position: fixed;
   inset: 0;
-  background: #000; /* prevents white flash before Vanta paints */
+  background: #000;
   z-index: -2;
 }
 
-/* Page content wrapper creates stacking context above Vanta */
 .page-shell {
   position: relative;
   isolation: isolate;
@@ -103,34 +91,26 @@ body {
   z-index: 1;
 }
 
-/* Selection */
 ::selection {
   background: var(--accent-primary);
   color: white;
 }
 
-/* Links */
 a {
   color: inherit;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-/* Images */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Lists */
 ul {
   list-style: none;
 }
-
-/* ============================================
-   Apple Liquid Glass Effect
-   ============================================ */
 
 .liquid-glass {
   background: rgba(255, 255, 255, 0.05);
@@ -141,10 +121,6 @@ ul {
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
-
-/* ============================================
-   Navigation
-   ============================================ */
 
 .navbar {
   position: fixed;
@@ -179,27 +155,17 @@ ul {
 
 .nav-pill a:hover {
   color: var(--text-accent);
-  background: rgba(255, 255, 255, 0.05);
 }
-
-/* ============================================
-   Hero Section
-   ============================================ */
 
 .hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-xl);
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: var(--space-md);
+  padding: var(--space-xl);
 }
 
 .hero-title {
@@ -217,49 +183,31 @@ ul {
   letter-spacing: -0.01em;
 }
 
-/* ============================================
-   About Section
-   ============================================ */
-
-.about-description {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-/* ============================================
-   Sections & Container
-   ============================================ */
-
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 5rem 2rem; /* 80px vertical, 32px horizontal */
+  padding: 5rem 3rem;
 }
 
-#about.section {
-  padding-top: 4rem; /* 64px */
-  padding-bottom: 4rem; /* 64px */
-}
-
-.container {
-  padding: 0 1rem; /* 16px additional horizontal padding */
-}
-
-.section-header {
-  margin-bottom: 2rem; /* 32px */
+.section-about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .section-title {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.03em;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 2rem;
 }
 
-/* ============================================
-   Experience Cards
-   ============================================ */
+.about-description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #d1d5db;
+  line-height: 1.8;
+  max-width: 1080px;
+}
 
 .experience-grid {
   display: flex;
@@ -290,15 +238,9 @@ ul {
   margin-bottom: var(--space-sm);
 }
 
-.company-info {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
 .company-name {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.01em;
 }
 
@@ -333,7 +275,8 @@ ul {
   position: relative;
   padding-left: var(--space-lg);
   font-size: 0.9375rem;
-  color: var(--text-secondary);
+  font-weight: 300;
+  color: #d1d5db;
   line-height: 1.6;
 }
 
@@ -350,7 +293,7 @@ ul {
   gap: var(--space-sm);
 }
 
-.experience-tech span {
+.experience-tech li {
   padding: var(--space-xs) var(--space-sm);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -359,10 +302,6 @@ ul {
   font-size: 0.75rem;
   color: var(--text-secondary);
 }
-
-/* ============================================
-   Projects
-   ============================================ */
 
 .projects-grid {
   display: grid;
@@ -389,17 +328,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
-.project-placeholder {
+.project-image svg {
   width: 64px;
   height: 64px;
   color: var(--text-tertiary);
-}
-
-.project-placeholder svg {
-  width: 100%;
-  height: 100%;
 }
 
 .project-content {
@@ -431,7 +366,8 @@ ul {
 
 .project-description {
   font-size: 0.9375rem;
-  color: var(--text-secondary);
+  font-weight: 300;
+  color: #d1d5db;
   line-height: 1.6;
 }
 
@@ -441,7 +377,7 @@ ul {
   gap: var(--space-sm);
 }
 
-.project-tech span {
+.project-tech li {
   padding: var(--space-xs) var(--space-sm);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -449,13 +385,6 @@ ul {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--text-secondary);
-}
-
-.project-links {
-  display: flex;
-  gap: var(--space-md);
-  margin-top: auto;
-  padding-top: var(--space-md);
 }
 
 .project-link {
@@ -466,6 +395,8 @@ ul {
   font-weight: 500;
   color: var(--text-secondary);
   transition: color var(--transition-fast);
+  margin-top: auto;
+  padding-top: var(--space-md);
 }
 
 .project-link:hover {
@@ -476,10 +407,6 @@ ul {
   width: 16px;
   height: 16px;
 }
-
-/* ============================================
-   Skills
-   ============================================ */
 
 .skills-grid {
   display: grid;
@@ -494,10 +421,10 @@ ul {
 
 .skill-category-title {
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-tertiary);
+  color: #ffffff;
   margin-bottom: var(--space-lg);
 }
 
@@ -507,43 +434,33 @@ ul {
   gap: var(--space-sm);
 }
 
-.skill-item {
+.skill-items li {
   padding: var(--space-sm) var(--space-md);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #d1d5db;
   transition: all var(--transition-fast);
 }
 
-.skill-item:hover {
+.skill-items li:hover {
   border-color: rgba(255, 255, 255, 0.25);
   background: rgba(255, 255, 255, 0.12);
 }
 
-.skill-name {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-/* ============================================
-   Contact
-   ============================================ */
-
-.contact-content {
-  text-align: left;
-}
-
 .contact-title {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.03em;
-  margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
 }
 
 .contact-description {
   font-size: 1.125rem;
-  color: var(--text-secondary);
+  font-weight: 300;
+  color: #d1d5db;
   margin-bottom: var(--space-2xl);
   line-height: 1.7;
 }
@@ -551,7 +468,6 @@ ul {
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
   gap: var(--space-md);
 }
 
@@ -589,22 +505,14 @@ ul {
   height: 18px;
 }
 
-/* ============================================
-   Footer
-   ============================================ */
-
 .footer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 5rem 2rem; /* 80px vertical, 32px horizontal */
+  padding: 5rem 3rem;
   text-align: center;
 }
 
-.footer-content {
-  padding: 0 1rem; /* 16px additional horizontal padding */
-}
-
-.footer-content p {
+.footer p {
   font-size: 0.875rem;
   color: var(--text-tertiary);
   margin-bottom: var(--space-sm);
@@ -621,24 +529,19 @@ ul {
   height: 14px;
 }
 
-/* ============================================
-   Responsive Design
-   ============================================ */
-
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 2rem;
+  }
+
   .section,
   .footer {
-    padding: 4rem 1.5rem; /* 64px vertical, 24px horizontal on tablet */
+    padding: 4rem 2rem;
   }
 
-  #about.section {
+  .section-about {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-
-  .container,
-  .footer-content {
-    padding: 0 0.5rem; /* 8px additional horizontal padding */
   }
 
   .nav-pill {
@@ -676,37 +579,29 @@ ul {
 @media (max-width: 480px) {
   .section,
   .footer {
-    padding: 3rem 1.5rem; /* 48px vertical, 24px horizontal on mobile */
+    padding: 3rem 2rem;
   }
 
-  #about.section {
+  .section-about {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
 
-  .container,
-  .footer-content {
-    padding: 0 0.5rem; /* 8px additional horizontal padding */
-  }
-
   .hero {
-    min-height: calc(
-      100vh + 1.5rem
-    ); /* Extend 24px for mobile dynamic toolbar */
+    min-height: calc(100vh + 1.5rem);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
   .vanta-background {
-    bottom: -1.5rem; /* Extend 24px below viewport for mobile */
+    bottom: -1.5rem;
   }
 
   .about-description {
-    font-size: 0.9375rem; /* Match project/experience text size */
+    font-size: 0.9375rem;
   }
 }
 
-/* Animations on scroll (optional enhancement) */
 @media (prefers-reduced-motion: no-preference) {
   .experience-card,
   .project-card,
@@ -755,9 +650,4 @@ ul {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Active nav link indicator */
-.nav-pill a.active {
-  color: var(--text-accent);
 }
