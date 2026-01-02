@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Christopher Bartha',
   description:
-    'Full-Stack Software Engineer focused on backend systems, data pipelines, and applied machine learning. Building scalable, production-grade software.',
+    'Full-Stack Software Engineer focused on backend systems, data pipelines, and applied machine learning.',
   keywords: [
     'Christopher Bartha',
     'Chris Bartha',
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   metadataBase: new URL('https://chrisbartha.com'),
+  alternates: { canonical: '/' }, // => https://chrisbartha.com/
 };
 
 export default function RootLayout({
